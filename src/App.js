@@ -1,5 +1,8 @@
 import React from 'react'
 import './App.css'
+import Home from './pages/Home'
+import SearchResults from './pages/SearchResults'
+import Detail from './pages/Detail'
 
 import { Link, Route } from 'wouter'
 
@@ -8,7 +11,7 @@ export default function App() {
     <div className='App'>
       <section className='App-content'>
         <Link to='/'>
-          <p>Giffy Clone</p>
+          <p>GIFFY CLONE</p>
         </Link>
         <Route
           component={Home}
