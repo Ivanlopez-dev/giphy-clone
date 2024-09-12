@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Spinner from '../../components/Spinner'
-import ListOfGifs from '../../components/ListOfGifs/index'
+import ListOfGifs from '../../components/ListOfGifs'
 import getGifs from '../../services/getGifs'
 
 export default function SearchResults({ params }) {
