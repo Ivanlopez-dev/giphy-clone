@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'wouter'
+import { useLocation } from 'wouter'
 import ListOfGifs from '../../components/ListOfGifs'
 import { useGifs } from '../../hooks/useGifs'
 import Category from '../../components/Category'
