@@ -5,21 +5,22 @@ import SearchResults from './pages/SearchResults'
 import Detail from './pages/Detail'
 import StaticContext from './context/StaticContext'
 import { GifsContextProvider } from './context/GifsContext'
-
 import { Link, Route } from 'wouter'
 
 export default function App() {
   return (
     <StaticContext.Provider
-      value={{
-        name: 'lorodevs',
-        suscribeteAlCanal: true,
-      }}
+      value={{ name: 'lorodevs', suscribeteAlCanal: true }}
     >
       <div className='App'>
         <section className='App-content'>
           <Link to='/'>
-            <p>GIFFY</p>
+            <figure className='App-logo'>
+              <img
+                alt='Giffy logo'
+                src='/logo.png'
+              />
+            </figure>
           </Link>
           <GifsContextProvider>
             <Route
