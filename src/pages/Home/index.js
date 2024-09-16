@@ -4,8 +4,6 @@ import ListOfGifs from 'components/ListOfGifs'
 import { useGifs } from 'hooks/useGifs'
 import TrendingSearches from 'components/TrendingSearches'
 
-const POPULAR_GIFS = ['Warioland', 'Zelda', 'Meat Boy', 'Super Mario']
-
 export default function Home() {
   const [keyword, setKeyword] = useState('')
   const [path, pushLocation] = useLocation()
@@ -24,7 +22,7 @@ export default function Home() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <button>Buscar</button>
+        <button>Search</button>
         <input
           placeholder='Search a gif here...'
           onChange={handleChange}
