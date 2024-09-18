@@ -11,7 +11,7 @@ export default function TrendingSearches() {
 
   return (
     <Category
-      name='Tendencias'
+      name='Trending'
       options={trends}
     />
   )
