@@ -14,7 +14,7 @@ const fromApiResponseToGifs = apiResponse => {
 }
 
 export default function getGifs({
-  limit = 20,
+  limit = 5,
   keyword = 'futurama',
   page = 0,
 } = {}) {
