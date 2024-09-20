@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function SearhForm({ onSubmit }) {
+function SearhForm({ onSubmit }) {
   const [keyword, setKeyword] = useState('')
 
   const handleSubmit = evt => {
@@ -25,3 +25,5 @@ export default function SearhForm({ onSubmit }) {
     </form>
   )
 }
+
+export default React.memo(SearhForm)

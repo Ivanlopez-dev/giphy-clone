@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useLocation } from 'wouter'
 import ListOfGifs from 'components/ListOfGifs'
 import { useGifs } from 'hooks/useGifs'
@@ -9,10 +9,13 @@ export default function Home() {
   const [path, pushLocation] = useLocation()
   const { loading, gifs } = useGifs()
 
-  const handleSubmit = ({ keyword }) => {
-    // navigate to other route
-    pushLocation(`/search/${keyword}`)
-  }
+  const handleSubmit = useCallback(
+    ({ keyword }) => {
+      // navigate to other route
+      pushLocation(`/search/${keyword}`)
+    },
+    [pushLocation]
+  )
 
   return (
     <>
