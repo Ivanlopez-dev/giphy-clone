@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
+import { useLocation } from 'wouter'
 import css from './SearchForm.module.css'
 import Button from 'components/Button'
 
 function SearhForm({ onSubmit }) {
   const [keyword, setKeyword] = useState('')
+  const [_, pushLocation] = useLocation()
+
+  const handleChange = evt => {
+    setKeyword(evt.target.value)
+  }
 
   const handleSubmit = evt => {
     evt.preventDefault()
     // navigate to other route
-    onSubmit({ keyword })
-  }
-
-  const handleChange = evt => {
-    setKeyword(evt.target.value)
+    pushLocation(`/search/${keyword}`)
   }
 
   return (
