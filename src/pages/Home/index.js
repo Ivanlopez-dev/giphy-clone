@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | Giffy</title>
+        <title>Homy | Giffy</title>
       </Helmet>
       <header className='o-header'>
         <SearchForm />
