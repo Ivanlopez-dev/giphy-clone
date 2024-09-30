@@ -17,7 +17,7 @@ export default function SearchResults({ params }) {
     once: false,
   })
 
-  const title = gifs ? `${gifs.length} resultados de ${keyword}` : ''
+  const title = gifs ? `${gifs.length} results of ${keyword}` : ''
 
   const debounceHandleNextPage = useCallback(
     debounce(() => setPage(prevPage => prevPage + 1), 200),
